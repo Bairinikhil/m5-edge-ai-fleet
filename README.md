@@ -2,6 +2,8 @@
 
 The final roadmap project: a small fleet control plane for M5 edge devices. It receives health, inference, and OTA status events over MQTT, stores the latest fleet history in SQLite, and exposes a local API.
 
+![M5 Edge-AI Fleet architecture](docs/fleet-overview.svg)
+
 ## Current milestone
 
 ```text
@@ -21,6 +23,8 @@ The first milestone supports:
 No commands or firmware updates are sent yet. The service is local-only by default.
 
 Smoke-tested with the real `m5-device-01` plus three simulated devices: **12 events**, **4 devices**, and health/inference/OTA records visible through `/fleet`.
+
+The sanitized smoke-test summary is available at [`docs/sample-fleet.json`](docs/sample-fleet.json). No credentials or live database are published.
 
 ## Run with WSL2
 

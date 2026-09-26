@@ -1,0 +1,6 @@
+{
+  "fleet": "ok",
+  "events": 12,
+  "devices": 4,
+  "tracked_event_types": ["health", "inference", "ota"]
+}
