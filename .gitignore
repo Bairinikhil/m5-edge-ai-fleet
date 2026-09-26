@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+fleet.db
+*.db-journal
+reports/
+.env
