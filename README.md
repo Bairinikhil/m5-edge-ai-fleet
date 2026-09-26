@@ -19,6 +19,7 @@ The first milestone supports:
 - Device identity validation
 - Latest event view at `GET /fleet`
 - Fleet health at `GET /health`
+- Live browser dashboard at `/`
 
 No commands or firmware updates are sent yet. The service is local-only by default.
 
@@ -39,7 +40,7 @@ export MQTT_PORT=1883
 python fleet.py
 ```
 
-The API runs at `http://127.0.0.1:8082`.
+The API and dashboard run at `http://127.0.0.1:8082`.
 
 ## Test with simulated devices
 
@@ -53,6 +54,8 @@ curl http://127.0.0.1:8082/health
 curl http://127.0.0.1:8082/fleet
 ```
 
+Open `http://127.0.0.1:8082/` in a browser for the live dashboard. It refreshes every three seconds and shows the latest health, inference, and OTA event for each device.
+
 The simulator creates three safe development fixtures; it does not touch the M5 or change firmware.
 
 ## Checks
@@ -61,4 +64,4 @@ The simulator creates three safe development fixtures; it does not touch the M5 
 python -m unittest -v
 ```
 
-Next milestones are a fleet dashboard, authenticated commands, signed OTA rollout tracking, reconnect/offline detection, and a TLS-only deployment profile.
+The portfolio milestone is now complete: ingestion, persistence, API, simulator, and dashboard are included. Production follow-ups are authenticated commands, signed OTA rollout tracking, reconnect/offline detection, and a TLS-only deployment profile.
